@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Your Shopping Paradise</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .login-form button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-form button:hover {
+            background-color: #45a049;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .signup-link:hover {
+            color: #4caf50;
+        }
+
+        .brand-logo {
+            margin-bottom: 20px;
+        }
+
+        .brand-logo img {
+            width: 120px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="brand-logo">
+            <img src="data:image/jpeg;base64,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">
+        </div>
+        <h2>Welcome Back to Your Shopping Paradise</h2>
+        <form class="login-form" action="your_backend_processing_script.php" method="post">
+            <input type="text" name="username" placeholder="Username or Email" required>
+            <br>
+            <input type="password" name="password" placeholder="Password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+        <a class="signup-link" href="#">Don't have an account? Sign up here</a>
+    </div>
+</body>
+</html>
